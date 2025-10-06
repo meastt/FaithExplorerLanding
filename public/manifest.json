@@ -1,0 +1,20 @@
+{
+  "name": "Faith Explorer - AI-Powered Religious Text Search",
+  "short_name": "Faith Explorer",
+  "description": "Explore 135,000+ sacred verses from 9 major world religions with AI-powered insights",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#667eea",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["education", "lifestyle", "religion"],
+  "lang": "en-US"
+}

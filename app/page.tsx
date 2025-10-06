@@ -193,7 +193,7 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-gray-100"
             >
-              Search, compare, and learn from sacred scriptures across Christianity, Islam, Judaism, Buddhism, Hinduism, and more. Complete Talmud • Full Bhagavad Gita • Academic-quality translations.
+              Search, compare, and learn from sacred scriptures across <a href="#religions" className="underline hover:text-gold-200 transition-colors">Christianity, Islam, Judaism, Buddhism, Hinduism</a>, and more. Complete <a href="#religions" className="underline hover:text-gold-200 transition-colors">Talmud</a> • Full <a href="#religions" className="underline hover:text-gold-200 transition-colors">Bhagavad Gita</a> • Academic-quality translations.
             </motion.p>
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
@@ -459,6 +459,8 @@ export default function Home() {
                 <li><a href="#religions" className="hover:text-white transition-colors">Judaism - Complete Talmud</a></li>
                 <li><a href="#religions" className="hover:text-white transition-colors">Buddhism & Hinduism</a></li>
                 <li><a href="#religions" className="hover:text-white transition-colors">All 9 Religions</a></li>
+                <li><a href="#features" className="hover:text-white transition-colors">AI-Powered Search</a></li>
+                <li><a href="#benefits" className="hover:text-white transition-colors">For Students & Scholars</a></li>
               </ul>
             </div>
             <div>

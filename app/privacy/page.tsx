@@ -1,8 +1,7 @@
-'use client'
-
 import { BookOpen, Shield, Mail, Calendar } from 'lucide-react'
 import Link from 'next/link'
 import { Metadata } from 'next'
+import Breadcrumb from '../components/Breadcrumb'
 
 export const metadata: Metadata = {
   title: 'Privacy Policy - Faith Explorer | Your Data Privacy Matters',
@@ -46,6 +45,9 @@ export default function PrivacyPolicy() {
           </div>
         </div>
       </nav>
+
+      {/* Breadcrumb */}
+      <Breadcrumb items={[{ label: 'Privacy Policy' }]} />
 
       {/* Header */}
       <section className="pt-20 pb-12 bg-gradient-to-br from-primary-50 to-gold-50">
