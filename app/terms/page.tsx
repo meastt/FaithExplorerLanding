@@ -2,6 +2,27 @@
 
 import { BookOpen, FileText, Mail, Calendar } from 'lucide-react'
 import Link from 'next/link'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Terms of Service - Faith Explorer | Legal Terms & Conditions',
+  description: 'Read Faith Explorer\'s Terms of Service. Learn about user responsibilities, AI features, religious content respect, and our commitment to interfaith understanding.',
+  keywords: 'terms of service, user agreement, legal terms, religious app terms, Faith Explorer terms, interfaith respect, AI religious education terms',
+  openGraph: {
+    title: 'Terms of Service - Faith Explorer',
+    description: 'Read our terms of service and learn about our commitment to interfaith understanding and respect.',
+    url: 'https://faithexplorer.app/terms',
+    type: 'article',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Terms of Service - Faith Explorer',
+    description: 'Read our terms of service and learn about our commitment to interfaith understanding.',
+  },
+  alternates: {
+    canonical: '/terms',
+  },
+}
 
 export default function TermsOfService() {
   return (

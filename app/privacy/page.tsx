@@ -2,6 +2,27 @@
 
 import { BookOpen, Shield, Mail, Calendar } from 'lucide-react'
 import Link from 'next/link'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Privacy Policy - Faith Explorer | Your Data Privacy Matters',
+  description: 'Learn how Faith Explorer protects your privacy. We collect minimal data, use local storage, and never track your spiritual journey. GDPR compliant and privacy-first design.',
+  keywords: 'privacy policy, data protection, GDPR compliant, religious app privacy, spiritual data security, Faith Explorer privacy',
+  openGraph: {
+    title: 'Privacy Policy - Faith Explorer',
+    description: 'Your privacy matters. Learn how Faith Explorer protects your spiritual journey with privacy-first design.',
+    url: 'https://faithexplorer.app/privacy',
+    type: 'article',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Privacy Policy - Faith Explorer',
+    description: 'Your privacy matters. Learn how Faith Explorer protects your spiritual journey.',
+  },
+  alternates: {
+    canonical: '/privacy',
+  },
+}
 
 export default function PrivacyPolicy() {
   return (
