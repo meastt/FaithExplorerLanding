@@ -182,8 +182,11 @@ export default function TermsOfService() {
 
             <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">7. Privacy and Data</h2>
             <p className="text-gray-700 mb-4">
-              Your privacy is important to us. Please review our Privacy Policy for detailed information about 
-              how we handle your data. Key points:
+              Your privacy is important to us. Please review our{' '}
+              <Link href="/privacy" className="text-primary-600 hover:text-primary-700 underline">
+                Privacy Policy
+              </Link>{' '}
+              for detailed information about how we handle your data. Key points:
             </p>
             <ul className="list-disc pl-6 text-gray-700 mb-4 space-y-1">
               <li>We collect minimal personal information</li>
@@ -192,9 +195,60 @@ export default function TermsOfService() {
               <li>You can delete your local data at any time</li>
             </ul>
 
-            <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">8. Disclaimers</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">8. Subscription & Billing</h2>
             
-            <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">8.1 Educational Purpose</h3>
+            <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">Faith Explorer Premium (Auto-Renewable Subscription)</h3>
+            
+            <p className="text-gray-700 mb-4">
+              <strong>Name:</strong> Faith Explorer Premium
+            </p>
+            
+            <p className="text-gray-700 mb-4">
+              <strong>Durations & Pricing:</strong> Monthly subscription ($4.99 USD) or Annual subscription ($39.99 USD)
+            </p>
+            
+            <p className="text-gray-700 mb-4">
+              <strong>Payment & Renewal:</strong> Payment will be charged to your Apple ID account upon confirmation of purchase. 
+              Your subscription will automatically renew unless you turn off auto-renewal at least 24 hours before the end of the current period.
+            </p>
+            
+            <p className="text-gray-700 mb-4">
+              <strong>Cancellation & Refunds:</strong> You can manage or cancel the subscription any time by going to your Apple ID Account Settings. 
+              Cancellation will take effect at the end of the current subscription period. Refunds (if any) are handled by Apple, subject to Apple's refund policy.
+            </p>
+            
+            <p className="text-gray-700 mb-4">
+              <strong>Post-Cancellation Access:</strong> After cancellation, you will retain access to the premium features until the end of the current paid period. 
+              After that, access reverts to the free tier.
+            </p>
+            
+            <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">Free vs Premium Features</h3>
+            
+            <p className="text-gray-700 mb-4">
+              <strong>Free Tier includes:</strong>
+            </p>
+            <ul className="list-disc pl-6 text-gray-700 mb-4 space-y-1">
+              <li>10 AI search queries with analysis per month</li>
+              <li>100 messages to the AI chat features per month</li>
+              <li>Access to religious texts and basic features</li>
+            </ul>
+            
+            <p className="text-gray-700 mb-4">
+              <strong>Premium Tier includes:</strong>
+            </p>
+            <ul className="list-disc pl-6 text-gray-700 mb-4 space-y-1">
+              <li>Unlimited AI search queries with analysis</li>
+              <li>Unlimited messages to the AI chat features</li>
+              <li>Full access to all app features</li>
+            </ul>
+            
+            <p className="text-gray-700 mb-4">
+              Upon cancellation or subscription expiration, your account will automatically revert to the free tier with the above-mentioned limits (10 AI searches and 100 AI chat messages per month).
+            </p>
+
+            <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">9. Disclaimers</h2>
+            
+            <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">9.1 Educational Purpose</h3>
             <p className="text-gray-700 mb-4">
               Faith Explorer is designed for educational and informational purposes. We do not:
             </p>
@@ -205,7 +259,7 @@ export default function TermsOfService() {
               <li>Guarantee theological accuracy of AI responses</li>
             </ul>
 
-            <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">8.2 App Availability</h3>
+            <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">9.2 App Availability</h3>
             <p className="text-gray-700 mb-4">
               We strive to provide reliable service, but we cannot guarantee:
             </p>
@@ -216,7 +270,7 @@ export default function TermsOfService() {
               <li>Availability of all features in all regions</li>
             </ul>
 
-            <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">9. Limitation of Liability</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">10. Limitation of Liability</h2>
             <p className="text-gray-700 mb-4">
               To the maximum extent permitted by law, Faith Explorer shall not be liable for:
             </p>
@@ -227,26 +281,26 @@ export default function TermsOfService() {
               <li>Third-party content or external links</li>
             </ul>
 
-            <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">10. Termination</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">11. Termination</h2>
             <p className="text-gray-700 mb-4">
               We may terminate or suspend your access to Faith Explorer at any time, with or without notice, 
               for any reason, including violation of these Terms.
             </p>
 
-            <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">11. Changes to Terms</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">12. Changes to Terms</h2>
             <p className="text-gray-700 mb-4">
               We may update these Terms from time to time. We will notify users of significant changes through 
               the app or other appropriate means. Continued use of the app after changes constitutes acceptance 
               of the new Terms.
             </p>
 
-            <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">12. Governing Law</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">13. Governing Law</h2>
             <p className="text-gray-700 mb-4">
-              These Terms are governed by the laws of [Your Jurisdiction] without regard to conflict of law principles. 
-              Any disputes will be resolved in the courts of [Your Jurisdiction].
+              These Terms are governed by the laws of the State of Utah, United States, without regard to conflict of law principles. 
+              Any disputes will be resolved in the courts of the State of Utah.
             </p>
 
-            <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">13. Contact Information</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">14. Contact Information</h2>
             <p className="text-gray-700 mb-4">
               If you have any questions about these Terms of Service, please contact us:
             </p>
