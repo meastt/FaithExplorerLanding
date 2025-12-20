@@ -18,122 +18,65 @@ import {
   Database,
   Sparkles,
   Lock,
-  Smartphone,
-  BookMarked,
-  Scale,
-  Calendar
+  Smartphone
 } from 'lucide-react'
 
 const religions = [
-  { 
-    name: 'Christianity', 
-    texts: ['KJV Bible (31,100 verses)', 'Catholic Bible - Douay-Rheims (34,827 verses)', 'Orthodox Bible (34,827 verses)', 'Book of Mormon (6,604 verses)', 'Doctrine & Covenants (3,654 verses)'], 
-    color: 'bg-blue-500', 
-    verses: '110,000+',
-    highlight: 'Catholic & Orthodox included'
-  },
-  { 
-    name: 'Islam', 
-    texts: ['Quran - Sahih International (6,236 verses)', 'Hadith - Bukhari (7,589 verses)'], 
-    color: 'bg-green-500', 
-    verses: '13,825+',
-    highlight: 'Authentic translations'
-  },
-  { 
-    name: 'Judaism', 
-    texts: ['Torah (5,846 verses)'], 
-    color: 'bg-yellow-500', 
-    verses: '5,846',
-    highlight: 'Complete Torah'
-  },
-  { 
-    name: 'Hinduism', 
-    texts: ['Bhagavad Gita - Complete (9,814 verses)'], 
-    color: 'bg-red-500', 
-    verses: '9,814',
-    highlight: 'Full text included'
-  },
-  { 
-    name: 'Buddhism', 
-    texts: ['Dhammapada (423 verses)'], 
-    color: 'bg-orange-500', 
-    verses: '423',
-    highlight: 'Core teachings'
-  },
-  { 
-    name: 'Sikhism', 
-    texts: ['Guru Granth Sahib (2,052 verses)'], 
-    color: 'bg-amber-500', 
-    verses: '2,052',
-    highlight: 'Complete Granth'
-  },
-  { 
-    name: 'Taoism', 
-    texts: ['Chuang Tzu (634 verses)', 'Tao Te Ching (10 verses)'], 
-    color: 'bg-purple-500', 
-    verses: '644',
-    highlight: 'Classic texts'
-  },
-  { 
-    name: 'Confucianism', 
-    texts: ['Analects (486 verses)'], 
-    color: 'bg-indigo-500', 
-    verses: '486',
-    highlight: 'Philosophical wisdom'
-  },
-  { 
-    name: 'Shinto', 
-    texts: ['Kojiki (20 verses)'], 
-    color: 'bg-pink-500', 
-    verses: '20',
-    highlight: 'Ancient traditions'
-  }
+  { name: 'Christianity', texts: ['Bible KJV', 'Book of Mormon', 'Doctrine & Covenants'], color: 'bg-blue-500', verses: '31,000+' },
+  { name: 'Islam', texts: ['Quran (Sahih International)', 'Hadith Bukhari', 'Hadith Muslim'], color: 'bg-green-500', verses: '6,236+' },
+  { name: 'Judaism', texts: ['Torah', 'Complete Talmud (63,000+ verses)', '53 Tractates'], color: 'bg-yellow-500', verses: '63,000+' },
+  { name: 'Buddhism', texts: ['Dhammapada', 'Mahayana Sutras', 'Buddhist Teachings'], color: 'bg-orange-500', verses: '8,000+' },
+  { name: 'Hinduism', texts: ['Bhagavad Gita (9,800+ verses)', 'Vedas', 'Upanishads'], color: 'bg-red-500', verses: '9,800+' },
+  { name: 'Taoism', texts: ['Zhuangzi', 'I Ching', 'Daozang'], color: 'bg-purple-500', verses: '5,000+' },
+  { name: 'Confucianism', texts: ['Mengzi', 'Xunzi', 'Five Classics'], color: 'bg-indigo-500', verses: '4,000+' },
+  { name: 'Shinto', texts: ['Nihon Shoki', 'Norito'], color: 'bg-pink-500', verses: '3,000+' },
+  { name: 'Sikhism', texts: ['Guru Granth Sahib', 'Dasam Granth'], color: 'bg-amber-500', verses: '5,000+' }
 ]
 
 const features = [
   {
+    icon: <Database className="w-8 h-8" />,
+    title: '135,000+ Sacred Verses',
+    description: 'The world\'s largest collection of religious texts in one app - from the complete Talmud to Bhagavad Gita with academic-grade translations.',
+    highlight: 'Comprehensive Library'
+  },
+  {
+    icon: <Sparkles className="w-8 h-8" />,
+    title: 'AI-Powered Insights',
+    description: 'Get context-aware answers, verse-specific discussions, and comparative analysis across different faith traditions instantly.',
+    highlight: 'Smart Technology'
+  },
+  {
     icon: <Search className="w-8 h-8" />,
-    title: 'Scripture Search Engine',
-    description: 'Search across 144,000+ verses from 9 major world religions. AI-powered semantic search understands intent, not just keywords. Filter by religion or search across all faiths.',
+    title: 'Cross-Religion Search',
+    description: 'Search across all 9 major religions simultaneously. Find related teachings and compare perspectives in seconds.',
     highlight: 'Powerful Search'
   },
   {
-    icon: <BookOpen className="w-8 h-8" />,
-    title: 'Scripture Reader',
-    description: 'Browse complete religious texts chapter by chapter. Book/chapter/verse navigation with automatic reading position memory.',
-    highlight: 'Complete Texts'
-  },
-  {
-    icon: <MessageCircle className="w-8 h-8" />,
-    title: 'AI Dialogue Practice',
-    description: 'Chat with 9 AI religious guides representing each faith. Practice respectful interfaith conversation with multiple conversation topics.',
-    highlight: '9 AI Guides'
-  },
-  {
-    icon: <Scale className="w-8 h-8" />,
-    title: 'Comparative Analysis',
-    description: 'Compare teachings across religions on any topic. Side-by-side verse display with academic, neutral AI analysis.',
-    highlight: 'Cross-Faith Study'
-  },
-  {
-    icon: <Calendar className="w-8 h-8" />,
-    title: 'Daily Wisdom',
-    description: 'Fresh inspirational verse each day with multi-faith rotation. Share meaningful insights with friends and family.',
-    highlight: 'Daily Inspiration'
-  },
-  {
-    icon: <BookMarked className="w-8 h-8" />,
+    icon: <Heart className="w-8 h-8" />,
     title: 'Personal Library',
-    description: 'Save favorite verses with notes. Organize with folders and tags. Build your own spiritual study collections.',
-    highlight: 'Your Collection'
+    description: 'Save verses with personal notes, organize by tags, and build your own spiritual study collections with export options.',
+    highlight: 'Personalized Learning'
+  },
+  {
+    icon: <Smartphone className="w-8 h-8" />,
+    title: 'Offline Access',
+    description: 'Download sacred texts for offline reading. Study anywhere, anytime on iOS, Android, or web with seamless sync.',
+    highlight: 'Cross-Platform'
+  },
+  {
+    icon: <Lock className="w-8 h-8" />,
+    title: 'Privacy First',
+    description: 'Your searches and spiritual journey stay private. Local storage, no tracking, GDPR compliant.',
+    highlight: 'Secure & Private'
   }
 ]
 
 const stats = [
-  { number: '144,122', label: 'Sacred Verses', description: 'Total searchable verses' },
+  { number: '135,000+', label: 'Sacred Verses', description: 'Searchable across all religions' },
   { number: '9', label: 'Major Religions', description: 'Complete coverage' },
-  { number: '17', label: 'Sacred Texts', description: 'Academic-grade translations' },
-  { number: '9', label: 'AI Dialogue Partners', description: 'One for each faith tradition' }
+  { number: '15+', label: 'Religious Texts', description: 'Including Talmud & Bhagavad Gita' },
+  { number: '53', label: 'Talmud Tractates', description: 'Complete Babylonian Talmud' }
 ]
 
 const testimonials = [
@@ -163,17 +106,17 @@ const benefits = [
     points: [
       'Academic-grade sources with proper citations',
       'Compare verses across religions instantly',
-      'Complete texts including Catholic & Orthodox Bibles',
-      'Export notes and verses for research papers'
+      'Export notes and verses for research papers',
+      'Complete texts, not simplified excerpts'
     ]
   },
   {
     title: 'For Spiritual Seekers',
     points: [
       'Explore wisdom from all major faith traditions',
-      'Practice interfaith dialogue with 9 AI guides',
+      'Personalized reading experience (themes, fonts)',
       'Save and organize your spiritual journey',
-      'Daily wisdom from multiple faith traditions'
+      'Learn at your own pace with AI guidance'
     ]
   },
   {
@@ -221,8 +164,8 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-20 pb-16 hero-bg text-white relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <section className="pt-20 pb-16 hero-bg text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -231,26 +174,26 @@ export default function Home() {
               className="inline-block mb-4"
             >
               <span className="bg-gold-500/20 text-gold-200 px-4 py-2 rounded-full text-sm font-semibold">
-                ✨ One app. Nine faiths. 144,000+ verses.
+                🎯 135,000+ Verses • 9 Major Religions • AI-Powered
               </span>
             </motion.div>
             <motion.h1 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-5xl md:text-7xl font-bold mb-6 leading-tight"
+              className="text-5xl md:text-7xl font-bold mb-6"
             >
-              The Interfaith Scripture Library
+              The World's Most Complete
               <br />
-              <span className="gold-gradient">In Your Pocket</span>
+              <span className="gold-gradient">Religious Text Library</span>
             </motion.h1>
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-gray-100 leading-relaxed"
+              className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-gray-100"
             >
-              Explore world religions with respect and understanding. Search across <strong>144,122 verses</strong> from <strong>17 sacred texts</strong> including <a href="#religions" className="underline hover:text-gold-200 transition-colors font-semibold">Catholic & Orthodox Bibles</a>, complete <a href="#religions" className="underline hover:text-gold-200 transition-colors font-semibold">Bhagavad Gita</a>, and more. Practice interfaith dialogue with <strong>9 AI guides</strong>.
+              Search, compare, and learn from sacred scriptures across <a href="#religions" className="underline hover:text-gold-200 transition-colors">Christianity, Islam, Judaism, Buddhism, Hinduism</a>, and more. Complete <a href="#religions" className="underline hover:text-gold-200 transition-colors">Talmud</a> • Full <a href="#religions" className="underline hover:text-gold-200 transition-colors">Bhagavad Gita</a> • Academic-quality translations.
             </motion.p>
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
@@ -258,11 +201,11 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             >
-              <a href="#download" className="bg-gold-500 text-white px-8 py-4 rounded-lg text-lg font-bold hover:bg-gold-600 transition-all flex items-center shadow-xl hover:shadow-2xl transform hover:scale-105">
+              <a href="#download" className="bg-gold-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gold-600 transition-colors flex items-center shadow-xl">
                 <Download className="w-5 h-5 mr-2" />
                 Start Free - No Credit Card
               </a>
-              <a href="#features" className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-primary-600 transition-all">
+              <a href="#features" className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors">
                 Explore Features
               </a>
             </motion.div>
@@ -279,7 +222,7 @@ export default function Home() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-gradient-to-r from-primary-600 to-primary-700 text-white">
+      <section className="py-12 bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-4 gap-8 text-center">
             {stats.map((stat, index) => (
@@ -288,11 +231,11 @@ export default function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="p-6"
+                className="p-4"
               >
-                <div className="text-5xl md:text-6xl font-bold text-gold-400 mb-3">{stat.number}</div>
-                <div className="text-xl font-bold text-white mb-2">{stat.label}</div>
-                <div className="text-sm text-primary-100">{stat.description}</div>
+                <div className="text-4xl md:text-5xl font-bold text-primary-600 mb-2">{stat.number}</div>
+                <div className="text-lg font-semibold text-gray-900 mb-1">{stat.label}</div>
+                <div className="text-sm text-gray-600">{stat.description}</div>
               </motion.div>
             ))}
           </div>
@@ -300,29 +243,29 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section id="features" className="py-20 bg-white">
+      <section id="features" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Everything You Need for Religious Study</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Built for scholars, seekers, and students. <strong>AI-powered search</strong> understands meaning, not just words. <strong>9 AI dialogue partners</strong> for interfaith practice. <strong>Academic, neutral approach</strong> — no religious bias.
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Everything You Need for Religious Study</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Built for scholars, seekers, and students with the most comprehensive collection of sacred texts
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-white to-gray-50 p-8 rounded-xl shadow-lg border border-gray-100 card-hover"
+                className="bg-white p-8 rounded-xl shadow-lg card-hover"
               >
-                <div className="inline-block p-3 bg-gradient-to-br from-primary-50 to-primary-100 rounded-xl mb-4 shadow-sm">
+                <div className="inline-block p-3 bg-primary-50 rounded-lg mb-4">
                   <div className="text-primary-600">{feature.icon}</div>
                 </div>
-                <div className="text-xs font-bold text-primary-600 mb-2 uppercase tracking-wider">{feature.highlight}</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
-                <p className="text-gray-600 leading-relaxed text-sm">{feature.description}</p>
+                <div className="text-xs font-semibold text-primary-600 mb-2 uppercase tracking-wide">{feature.highlight}</div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">{feature.title}</h3>
+                <p className="text-gray-600 leading-relaxed">{feature.description}</p>
               </motion.div>
             ))}
           </div>
@@ -330,44 +273,37 @@ export default function Home() {
       </section>
 
       {/* Religions Showcase */}
-      <section id="religions" className="py-20 bg-gradient-to-b from-white to-gray-50">
+      <section id="religions" className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Complete Sacred Texts from 9 Major Religions</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              <strong>17 sacred texts</strong> with academic-grade translations. Includes <strong>Catholic & Orthodox Bibles</strong> — not just Protestant. Complete <strong>Bhagavad Gita (9,814 verses)</strong> and more. The largest multi-faith scripture database in a mobile app.
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Complete Sacred Texts from 9 Major Religions</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Academic-grade translations including the complete Babylonian Talmud (63,000+ verses) and full Bhagavad Gita (9,800+ verses) - not available in other apps
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {religions.map((religion, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white rounded-xl shadow-lg border border-gray-100 p-6 card-hover"
+                className="bg-white rounded-xl shadow-lg p-6 card-hover"
               >
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center">
-                    <div className={`w-4 h-4 rounded-full ${religion.color} mr-3 shadow-sm`}></div>
-                    <h3 className="text-xl font-bold text-gray-900">{religion.name}</h3>
+                    <div className={`w-4 h-4 rounded-full ${religion.color} mr-3`}></div>
+                    <h3 className="text-xl font-semibold text-gray-900">{religion.name}</h3>
                   </div>
-                  <span className="text-xs font-bold text-primary-600 bg-primary-50 px-3 py-1 rounded-full">
+                  <span className="text-sm font-semibold text-primary-600 bg-primary-50 px-3 py-1 rounded-full">
                     {religion.verses}
                   </span>
                 </div>
-                {religion.highlight && (
-                  <div className="mb-3">
-                    <span className="text-xs font-semibold text-gold-600 bg-gold-50 px-2 py-1 rounded">
-                      {religion.highlight}
-                    </span>
-                  </div>
-                )}
-                <div className="space-y-2.5">
+                <div className="space-y-2">
                   {religion.texts.map((text, textIndex) => (
-                    <div key={textIndex} className="flex items-start text-gray-700">
+                    <div key={textIndex} className="flex items-start text-gray-600">
                       <ChevronRight className="w-4 h-4 mr-2 text-primary-500 mt-0.5 flex-shrink-0" />
-                      <span className="text-sm leading-relaxed">{text}</span>
+                      <span className="text-sm">{text}</span>
                     </div>
                   ))}
                 </div>
@@ -377,79 +313,30 @@ export default function Home() {
         </div>
       </section>
 
-      {/* AI Dialogue Partners Section */}
-      <section className="py-20 bg-gradient-to-br from-primary-50 via-white to-gold-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Practice Interfaith Dialogue with 9 AI Guides</h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                Chat with AI religious guides representing each faith tradition. Practice respectful interfaith conversation on multiple topics. <strong>Academic, neutral approach</strong> — no religious bias.
-              </p>
-            </motion.div>
-          </div>
-          <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-4 max-w-5xl mx-auto">
-            {[
-              { name: 'Rev. Sarah', faith: 'Christianity', emoji: '✝️' },
-              { name: 'Brother Ahmed', faith: 'Islam', emoji: '🕌' },
-              { name: 'Rabbi Cohen', faith: 'Judaism', emoji: '✡️' },
-              { name: 'Pandit Sharma', faith: 'Hinduism', emoji: '🕉️' },
-              { name: 'Monk Tenzin', faith: 'Buddhism', emoji: '☸️' },
-              { name: 'Bhai Harpreet', faith: 'Sikhism', emoji: '🙏' },
-              { name: 'Master Chen', faith: 'Taoism', emoji: '☯️' },
-              { name: 'Teacher Wei', faith: 'Confucianism', emoji: '📚' },
-              { name: 'Kannushi Tanaka', faith: 'Shinto', emoji: '⛩️' }
-            ].map((guide, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.4, delay: index * 0.05 }}
-                className="bg-white rounded-lg shadow-md p-4 text-center border border-gray-100 hover:shadow-lg transition-shadow"
-              >
-                <div className="text-3xl mb-2">{guide.emoji}</div>
-                <div className="font-semibold text-gray-900 text-sm mb-1">{guide.name}</div>
-                <div className="text-xs text-gray-600">{guide.faith}</div>
-              </motion.div>
-            ))}
-          </div>
-          <div className="text-center mt-12">
-            <p className="text-gray-600 mb-6">Practice respectful interfaith conversation on topics like prayer, charity, suffering, and more</p>
-            <a href="#download" className="inline-block bg-primary-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors shadow-lg">
-              Start Your Dialogue Journey
-            </a>
-          </div>
-        </div>
-      </section>
-
       {/* Benefits Section */}
-      <section id="benefits" className="py-20 bg-gradient-to-b from-gray-50 to-white">
+      <section id="benefits" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Who Faith Explorer Is For</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Trusted by religious scholars, spiritual seekers, and interfaith leaders worldwide. <strong>Academic, neutral approach</strong> — no religious bias. <strong>Complete texts, not excerpts</strong>.
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Who Faith Explorer Is For</h2>
+            <p className="text-xl text-gray-600">
+              Trusted by religious scholars, spiritual seekers, and interfaith leaders worldwide
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white rounded-xl shadow-lg border border-gray-100 p-8 card-hover"
+                className="bg-white rounded-xl shadow-lg p-8"
               >
                 <h3 className="text-2xl font-bold text-gray-900 mb-6">{benefit.title}</h3>
                 <ul className="space-y-4">
                   {benefit.points.map((point, pointIndex) => (
                     <li key={pointIndex} className="flex items-start">
                       <Star className="w-5 h-5 text-gold-500 mr-3 mt-0.5 flex-shrink-0 fill-current" />
-                      <span className="text-gray-700 leading-relaxed">{point}</span>
+                      <span className="text-gray-700">{point}</span>
                     </li>
                   ))}
                 </ul>
@@ -460,11 +347,11 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
-      <section id="testimonials" className="py-20 bg-white">
+      <section id="testimonials" className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Trusted by Religious Scholars & Students</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">Join thousands exploring faith with academic rigor and respectful interfaith dialogue</p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Trusted by Religious Scholars & Students</h2>
+            <p className="text-xl text-gray-600">Join thousands exploring faith with academic rigor</p>
           </div>
           <div className="max-w-4xl mx-auto">
             <motion.div
@@ -503,26 +390,25 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section id="download" className="py-20 hero-bg text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary-700/50 to-primary-900/50"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <section id="download" className="py-20 hero-bg text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-              Access 144,122 Sacred Verses Today
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Access 135,000+ Sacred Verses Today
             </h2>
-            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-gray-100 leading-relaxed">
-              Start your journey with the <strong>world's largest multi-faith scripture database</strong>. Free tier available — no credit card required. <strong>Catholic & Orthodox Bibles included</strong>. Practice interfaith dialogue with <strong>9 AI guides</strong>.
+            <p className="text-xl mb-8 max-w-3xl mx-auto text-gray-100">
+              Start your journey with the world's most comprehensive religious text library. Free tier available - no credit card required. Premium features unlock unlimited AI insights and cross-platform sync.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-              <a href="https://apps.apple.com/app/faith-explorer" className="bg-gold-500 text-white px-8 py-4 rounded-lg text-lg font-bold hover:bg-gold-600 transition-all flex items-center shadow-xl hover:shadow-2xl min-w-[240px] justify-center transform hover:scale-105">
+              <a href="https://apps.apple.com/app/faith-explorer" className="bg-gold-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gold-600 transition-colors flex items-center shadow-xl min-w-[240px] justify-center">
                 <Download className="w-5 h-5 mr-2" />
                 Download for iOS
               </a>
-              <a href="https://play.google.com/store/apps/details?id=com.faithexplorer" className="bg-gold-500 text-white px-8 py-4 rounded-lg text-lg font-bold hover:bg-gold-600 transition-all flex items-center shadow-xl hover:shadow-2xl min-w-[240px] justify-center transform hover:scale-105">
+              <a href="https://play.google.com/store/apps/details?id=com.faithexplorer" className="bg-gold-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gold-600 transition-colors flex items-center shadow-xl min-w-[240px] justify-center">
                 <Download className="w-5 h-5 mr-2" />
                 Download for Android
               </a>
@@ -561,8 +447,8 @@ export default function Home() {
                 <BookOpen className="w-8 h-8 text-primary-400" />
                 <span className="ml-2 text-xl font-bold">Faith Explorer</span>
               </div>
-              <p className="text-gray-400 leading-relaxed">
-                The world's most comprehensive religious text app with <strong>144,122 verses</strong> from <strong>17 sacred texts</strong> across <strong>9 major religions</strong>. AI-powered insights and 9 dialogue partners.
+              <p className="text-gray-400">
+                The world's most comprehensive religious text app with 135,000+ verses and AI-powered insights.
               </p>
             </div>
             <div>
@@ -598,7 +484,7 @@ export default function Home() {
           </div>
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
             <p>&copy; 2024 Faith Explorer. All rights reserved.</p>
-            <p className="mt-2 text-sm">144,122 verses • 9 religions • 17 texts • 9 AI guides • Academic-quality sources</p>
+            <p className="mt-2 text-sm">135,000+ verses • 9 religions • AI-powered insights • Academic-quality sources</p>
           </div>
         </div>
       </footer>
