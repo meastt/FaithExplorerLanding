@@ -527,9 +527,6 @@ export default function Home() {
                 Download for Android
               </a>
             </div>
-            <a href="https://app.faithexplorer.app" className="inline-block border-2 border-white text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors">
-              Or Use Web App
-            </a>
             <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-gray-200">
               <div className="flex items-center">
                 <Shield className="w-5 h-5 mr-2" />
