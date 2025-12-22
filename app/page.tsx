@@ -260,16 +260,16 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-32 pb-24 hero-bg text-warm-50 relative">
+      <section className="pt-36 pb-32 hero-bg relative">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="inline-block mb-8"
+              className="inline-block mb-10"
             >
-              <span className="bg-warm-500/20 text-warm-200 px-5 py-2 rounded-full text-sm font-medium tracking-wide border border-warm-400/30">
+              <span className="bg-sage-700/5 text-sage-800 px-6 py-2.5 rounded-full text-sm font-medium tracking-wide border border-sage-700/10 shadow-sm">
                 One app • Nine faiths • 144,000+ verses
               </span>
             </motion.div>
@@ -277,31 +277,31 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
-              className="text-5xl md:text-7xl lg:text-8xl font-serif font-semibold mb-8 leading-tight tracking-tight"
+              className="text-5xl md:text-7xl lg:text-8xl font-serif font-semibold mb-10 leading-[1.1] tracking-tight text-sage-900"
             >
               The Interfaith Scripture
               <br />
-              Library <span className="gold-gradient italic">In Your Pocket</span>
+              Library <span className="gold-gradient italic font-serif">In Your Pocket</span>
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-lg md:text-xl mb-10 max-w-3xl mx-auto text-warm-100 leading-relaxed font-light"
+              className="text-lg md:text-xl mb-12 max-w-3xl mx-auto text-sage-700 leading-relaxed"
             >
-              Explore world religions with respect and understanding. Search across <span className="font-medium text-warm-50">144,122 verses</span> from <span className="font-medium text-warm-50">17 sacred texts</span> including Catholic & Orthodox Bibles, complete Bhagavad Gita, and more. Practice interfaith dialogue with <span className="font-medium text-warm-50">9 AI guides</span>.
+              Explore world religions with respect and understanding. Search across <span className="font-semibold text-sage-900">144,122 verses</span> from <span className="font-semibold text-sage-900">17 sacred texts</span> including Catholic & Orthodox Bibles, complete Bhagavad Gita, and more. Practice interfaith dialogue with <span className="font-semibold text-sage-900">9 AI guides</span>.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-10"
+              className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
             >
-              <a href="#download" className="bg-warm-500 text-sage-900 px-8 py-4 rounded-md text-base font-semibold hover:bg-warm-600 transition-all elegant-shadow hover:shadow-xl group">
+              <a href="#download" className="bg-sage-800 text-white px-10 py-4 rounded-lg text-base font-semibold hover:bg-sage-900 transition-all shadow-lg hover:shadow-xl group">
                 <Download className="w-5 h-5 mr-2 inline-block group-hover:translate-y-0.5 transition-transform" />
                 Start Free
               </a>
-              <a href="#features" className="border-2 border-warm-200/40 text-warm-50 px-8 py-4 rounded-md text-base font-medium hover:bg-warm-50 hover:text-sage-900 transition-all backdrop-blur-sm">
+              <a href="#features" className="border-2 border-sage-700/20 text-sage-800 px-10 py-4 rounded-lg text-base font-semibold hover:bg-sage-700/5 transition-all">
                 Explore Features
               </a>
             </motion.div>
@@ -309,23 +309,23 @@ export default function Home() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-warm-200/90"
+              className="mt-10 flex flex-wrap justify-center gap-8 text-sm text-sage-700"
             >
               <div className="flex items-center gap-2">
-                <div className="w-1.5 h-1.5 rounded-full bg-warm-300"></div>
-                Free tier available
+                <div className="w-1.5 h-1.5 rounded-full bg-sage-600"></div>
+                <span className="font-medium">Free tier available</span>
               </div>
               <div className="flex items-center gap-2">
-                <div className="w-1.5 h-1.5 rounded-full bg-warm-300"></div>
-                iOS & Android
+                <div className="w-1.5 h-1.5 rounded-full bg-sage-600"></div>
+                <span className="font-medium">iOS & Android</span>
               </div>
               <div className="flex items-center gap-2">
-                <div className="w-1.5 h-1.5 rounded-full bg-warm-300"></div>
-                Works offline
+                <div className="w-1.5 h-1.5 rounded-full bg-sage-600"></div>
+                <span className="font-medium">Works offline</span>
               </div>
               <div className="flex items-center gap-2">
-                <div className="w-1.5 h-1.5 rounded-full bg-warm-300"></div>
-                Privacy-focused
+                <div className="w-1.5 h-1.5 rounded-full bg-sage-600"></div>
+                <span className="font-medium">Privacy-focused</span>
               </div>
             </motion.div>
           </div>
@@ -333,25 +333,23 @@ export default function Home() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-sage-800 text-warm-50 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
-          }}></div>
-        </div>
+      <section className="py-24 bg-white relative overflow-hidden border-y border-sage-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="grid md:grid-cols-4 gap-12 text-center">
+          <div className="grid md:grid-cols-4 gap-12">
             {stats.map((stat, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="p-6"
+                className="text-center group"
               >
-                <div className="text-5xl md:text-6xl font-serif font-semibold text-warm-400 mb-3">{stat.number}</div>
-                <div className="text-lg font-semibold text-warm-50 mb-2 tracking-wide">{stat.label}</div>
-                <div className="text-sm text-warm-200/80 font-light">{stat.description}</div>
+                <div className="relative inline-block mb-4">
+                  <div className="text-5xl md:text-6xl font-serif font-bold text-sage-900 mb-2 group-hover:scale-105 transition-transform">{stat.number}</div>
+                  <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-16 h-1 bg-gradient-to-r from-transparent via-warm-500 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                </div>
+                <div className="text-base font-serif font-semibold text-sage-800 mb-2 tracking-wide">{stat.label}</div>
+                <div className="text-sm text-sage-600 font-light">{stat.description}</div>
               </motion.div>
             ))}
           </div>
@@ -532,15 +530,17 @@ export default function Home() {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -20 }}
               transition={{ duration: 0.5 }}
-              className="bg-white rounded-lg elegant-border elegant-shadow p-12 text-center"
+              className="bg-white rounded-xl elegant-border elegant-shadow p-12 relative"
             >
               <div className="flex justify-center mb-6">
                 {[...Array(testimonials[currentTestimonial].rating)].map((_, i) => (
                   <Star key={i} className="w-5 h-5 text-warm-600 fill-current" />
                 ))}
               </div>
-              <p className="text-xl md:text-2xl text-sage-800 mb-8 italic leading-relaxed font-light">"{testimonials[currentTestimonial].content}"</p>
-              <div className="pt-4 border-t border-sage-200">
+              <div className="decorative-quote max-w-3xl mx-auto mb-8">
+                <p className="text-xl md:text-2xl text-sage-800 leading-relaxed font-light italic">{testimonials[currentTestimonial].content}</p>
+              </div>
+              <div className="pt-6 border-t border-sage-200 text-center">
                 <p className="font-serif font-semibold text-sage-900 text-lg mb-1">{testimonials[currentTestimonial].name}</p>
                 <p className="text-sage-600 font-light">{testimonials[currentTestimonial].role}</p>
               </div>
@@ -690,7 +690,12 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section id="download" className="py-24 hero-bg text-warm-50 relative overflow-hidden">
+      <section id="download" className="py-28 bg-sage-900 text-warm-50 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+          }}></div>
+        </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -700,20 +705,20 @@ export default function Home() {
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold mb-8 leading-tight tracking-tight">
               Access 144,122 Sacred Verses Today
             </h2>
-            <p className="text-lg md:text-xl mb-10 max-w-3xl mx-auto text-warm-100 leading-relaxed font-light">
+            <p className="text-lg md:text-xl mb-12 max-w-3xl mx-auto text-warm-100 leading-relaxed font-light">
               Start your journey with the world's largest multi-faith scripture database. Free tier available — no credit card required. Catholic & Orthodox Bibles included. Practice interfaith dialogue with 9 AI guides.
             </p>
-            <div className="flex flex-col sm:flex-row gap-5 justify-center items-center mb-10">
-              <a href="https://apps.apple.com/app/faith-explorer" className="bg-warm-500 text-sage-900 px-10 py-4 rounded-md text-base font-semibold hover:bg-warm-600 transition-all flex items-center elegant-shadow hover:shadow-xl min-w-[240px] justify-center group">
+            <div className="flex flex-col sm:flex-row gap-5 justify-center items-center mb-12">
+              <a href="https://apps.apple.com/app/faith-explorer" className="bg-warm-500 text-sage-900 px-10 py-4 rounded-lg text-base font-semibold hover:bg-warm-600 transition-all flex items-center shadow-xl hover:shadow-2xl min-w-[240px] justify-center group">
                 <Download className="w-5 h-5 mr-2 group-hover:translate-y-0.5 transition-transform" />
                 Download for iOS
               </a>
-              <a href="https://play.google.com/store/apps/details?id=com.faithexplorer" className="bg-warm-500 text-sage-900 px-10 py-4 rounded-md text-base font-semibold hover:bg-warm-600 transition-all flex items-center elegant-shadow hover:shadow-xl min-w-[240px] justify-center group">
+              <a href="https://play.google.com/store/apps/details?id=com.faithexplorer" className="bg-warm-500 text-sage-900 px-10 py-4 rounded-lg text-base font-semibold hover:bg-warm-600 transition-all flex items-center shadow-xl hover:shadow-2xl min-w-[240px] justify-center group">
                 <Download className="w-5 h-5 mr-2 group-hover:translate-y-0.5 transition-transform" />
                 Download for Android
               </a>
             </div>
-            <div className="mt-10 flex flex-wrap justify-center gap-8 text-sm text-warm-200/90">
+            <div className="mt-10 flex flex-wrap justify-center gap-8 text-sm text-warm-200 font-medium">
               <div className="flex items-center gap-2">
                 <Shield className="w-5 h-5" strokeWidth={1.5} />
                 Privacy-focused
