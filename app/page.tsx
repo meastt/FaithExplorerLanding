@@ -237,90 +237,110 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-warm-50">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-200">
+      <nav className="fixed top-0 w-full bg-warm-50/98 backdrop-blur-md z-50 elegant-border border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center">
-              <BookOpen className="w-8 h-8 text-primary-600" />
-              <span className="ml-2 text-xl font-bold text-gray-900">Faith Explorer</span>
+          <div className="flex justify-between items-center h-20">
+            <div className="flex items-center gap-3">
+              <BookOpen className="w-7 h-7 text-sage-600" strokeWidth={1.5} />
+              <span className="text-2xl font-serif font-semibold text-sage-900">Faith Explorer</span>
             </div>
-            <div className="hidden md:flex space-x-8">
-              <a href="#features" className="text-gray-600 hover:text-primary-600 transition-colors">Features</a>
-              <a href="#religions" className="text-gray-600 hover:text-primary-600 transition-colors">Sacred Texts</a>
-              <a href="#testimonials" className="text-gray-600 hover:text-primary-600 transition-colors">Reviews</a>
-              <a href="#contact" className="text-gray-600 hover:text-primary-600 transition-colors">Contact</a>
+            <div className="hidden md:flex space-x-10">
+              <a href="#features" className="text-sage-700 hover:text-sage-900 transition-colors text-sm font-medium tracking-wide">Features</a>
+              <a href="#religions" className="text-sage-700 hover:text-sage-900 transition-colors text-sm font-medium tracking-wide">Sacred Texts</a>
+              <a href="#testimonials" className="text-sage-700 hover:text-sage-900 transition-colors text-sm font-medium tracking-wide">Reviews</a>
+              <a href="#contact" className="text-sage-700 hover:text-sage-900 transition-colors text-sm font-medium tracking-wide">Contact</a>
             </div>
-            <a href="#download" className="bg-primary-600 text-white px-6 py-2 rounded-lg hover:bg-primary-700 transition-colors">
-              Get Started Free
+            <a href="#download" className="bg-sage-700 text-warm-50 px-7 py-2.5 rounded-md hover:bg-sage-800 transition-all elegant-shadow text-sm font-medium tracking-wide">
+              Get Started
             </a>
           </div>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-20 pb-16 hero-bg text-white relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <section className="pt-32 pb-24 hero-bg text-warm-50 relative">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="inline-block mb-4"
+              className="inline-block mb-8"
             >
-              <span className="bg-gold-500/20 text-gold-200 px-4 py-2 rounded-full text-sm font-semibold">
-                ✨ One app. Nine faiths. 144,000+ verses.
+              <span className="bg-warm-500/20 text-warm-200 px-5 py-2 rounded-full text-sm font-medium tracking-wide border border-warm-400/30">
+                One app • Nine faiths • 144,000+ verses
               </span>
             </motion.div>
-            <motion.h1 
+            <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-5xl md:text-7xl font-bold mb-6 leading-tight"
+              transition={{ duration: 0.8, delay: 0.1 }}
+              className="text-5xl md:text-7xl lg:text-8xl font-serif font-semibold mb-8 leading-tight tracking-tight"
             >
-              The Interfaith Scripture Library
+              The Interfaith Scripture
               <br />
-              <span className="gold-gradient">In Your Pocket</span>
+              Library <span className="gold-gradient italic">In Your Pocket</span>
             </motion.h1>
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-gray-100 leading-relaxed"
+              className="text-lg md:text-xl mb-10 max-w-3xl mx-auto text-warm-100 leading-relaxed font-light"
             >
-              Explore world religions with respect and understanding. Search across <strong>144,122 verses</strong> from <strong>17 sacred texts</strong> including <a href="#religions" className="underline hover:text-gold-200 transition-colors font-semibold">Catholic & Orthodox Bibles</a>, complete <a href="#religions" className="underline hover:text-gold-200 transition-colors font-semibold">Bhagavad Gita</a>, and more. Practice interfaith dialogue with <strong>9 AI guides</strong>.
+              Explore world religions with respect and understanding. Search across <span className="font-medium text-warm-50">144,122 verses</span> from <span className="font-medium text-warm-50">17 sacred texts</span> including Catholic & Orthodox Bibles, complete Bhagavad Gita, and more. Practice interfaith dialogue with <span className="font-medium text-warm-50">9 AI guides</span>.
             </motion.p>
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-10"
             >
-              <a href="#download" className="bg-gold-500 text-white px-8 py-4 rounded-lg text-lg font-bold hover:bg-gold-600 transition-all flex items-center shadow-xl hover:shadow-2xl transform hover:scale-105">
-                <Download className="w-5 h-5 mr-2" />
-                Start Free - No Credit Card
+              <a href="#download" className="bg-warm-500 text-sage-900 px-8 py-4 rounded-md text-base font-semibold hover:bg-warm-600 transition-all elegant-shadow hover:shadow-xl group">
+                <Download className="w-5 h-5 mr-2 inline-block group-hover:translate-y-0.5 transition-transform" />
+                Start Free
               </a>
-              <a href="#features" className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-primary-600 transition-all">
+              <a href="#features" className="border-2 border-warm-200/40 text-warm-50 px-8 py-4 rounded-md text-base font-medium hover:bg-warm-50 hover:text-sage-900 transition-all backdrop-blur-sm">
                 Explore Features
               </a>
             </motion.div>
-            <motion.p
+            <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              className="mt-6 text-gray-200 text-sm"
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-warm-200/90"
             >
-              ✓ Free tier available  ✓ iOS & Android  ✓ Works offline  ✓ Privacy-focused
-            </motion.p>
+              <div className="flex items-center gap-2">
+                <div className="w-1.5 h-1.5 rounded-full bg-warm-300"></div>
+                Free tier available
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-1.5 h-1.5 rounded-full bg-warm-300"></div>
+                iOS & Android
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-1.5 h-1.5 rounded-full bg-warm-300"></div>
+                Works offline
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-1.5 h-1.5 rounded-full bg-warm-300"></div>
+                Privacy-focused
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-gradient-to-r from-primary-600 to-primary-700 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-8 text-center">
+      <section className="py-20 bg-sage-800 text-warm-50 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+          }}></div>
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="grid md:grid-cols-4 gap-12 text-center">
             {stats.map((stat, index) => (
               <motion.div
                 key={index}
@@ -329,9 +349,9 @@ export default function Home() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="p-6"
               >
-                <div className="text-5xl md:text-6xl font-bold text-gold-400 mb-3">{stat.number}</div>
-                <div className="text-xl font-bold text-white mb-2">{stat.label}</div>
-                <div className="text-sm text-primary-100">{stat.description}</div>
+                <div className="text-5xl md:text-6xl font-serif font-semibold text-warm-400 mb-3">{stat.number}</div>
+                <div className="text-lg font-semibold text-warm-50 mb-2 tracking-wide">{stat.label}</div>
+                <div className="text-sm text-warm-200/80 font-light">{stat.description}</div>
               </motion.div>
             ))}
           </div>
@@ -339,29 +359,29 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section id="features" className="py-20 bg-white">
+      <section id="features" className="py-24 bg-warm-50 section-divider">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Everything You Need for Religious Study</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Built for scholars, seekers, and students. <strong>AI-powered search</strong> understands meaning, not just words. <strong>9 AI dialogue partners</strong> for interfaith practice. <strong>Academic, neutral approach</strong> — no religious bias.
+          <div className="text-center mb-20 pt-8">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold text-sage-900 mb-6 tracking-tight">Everything You Need for Religious Study</h2>
+            <p className="text-lg md:text-xl text-sage-700 max-w-3xl mx-auto leading-relaxed font-light">
+              Built for scholars, seekers, and students. AI-powered search understands meaning, not just words. 9 AI dialogue partners for interfaith practice. Academic, neutral approach — no religious bias.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-white to-gray-50 p-8 rounded-xl shadow-lg border border-gray-100 card-hover"
+                className="bg-white p-10 rounded-lg elegant-border elegant-shadow card-hover"
               >
-                <div className="inline-block p-3 bg-gradient-to-br from-primary-50 to-primary-100 rounded-xl mb-4 shadow-sm">
-                  <div className="text-primary-600">{feature.icon}</div>
+                <div className="inline-block p-4 bg-sage-50 rounded-lg mb-5">
+                  <div className="text-sage-700">{feature.icon}</div>
                 </div>
-                <div className="text-xs font-bold text-primary-600 mb-2 uppercase tracking-wider">{feature.highlight}</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
-                <p className="text-gray-600 leading-relaxed text-sm">{feature.description}</p>
+                <div className="text-xs font-semibold text-warm-600 mb-3 uppercase tracking-widest">{feature.highlight}</div>
+                <h3 className="text-xl font-serif font-semibold text-sage-900 mb-4">{feature.title}</h3>
+                <p className="text-sage-700 leading-relaxed text-sm font-light">{feature.description}</p>
               </motion.div>
             ))}
           </div>
@@ -369,44 +389,44 @@ export default function Home() {
       </section>
 
       {/* Religions Showcase */}
-      <section id="religions" className="py-20 bg-gradient-to-b from-white to-gray-50">
+      <section id="religions" className="py-24 bg-white section-divider">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Complete Sacred Texts from 9 Major Religions</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              <strong>17 sacred texts</strong> with academic-grade translations. Includes <strong>Catholic & Orthodox Bibles</strong> — not just Protestant. Complete <strong>Bhagavad Gita (9,814 verses)</strong> and more. The largest multi-faith scripture database in a mobile app.
+          <div className="text-center mb-20 pt-8">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold text-sage-900 mb-6 tracking-tight">Complete Sacred Texts from 9 Major Religions</h2>
+            <p className="text-lg md:text-xl text-sage-700 max-w-3xl mx-auto leading-relaxed font-light">
+              17 sacred texts with academic-grade translations. Includes Catholic & Orthodox Bibles — not just Protestant. Complete Bhagavad Gita (9,814 verses) and more. The largest multi-faith scripture database in a mobile app.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {religions.map((religion, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white rounded-xl shadow-lg border border-gray-100 p-6 card-hover"
+                className="bg-warm-50 rounded-lg elegant-border elegant-shadow p-8 card-hover"
               >
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center">
-                    <div className={`w-4 h-4 rounded-full ${religion.color} mr-3 shadow-sm`}></div>
-                    <h3 className="text-xl font-bold text-gray-900">{religion.name}</h3>
+                <div className="flex items-center justify-between mb-5">
+                  <div className="flex items-center gap-3">
+                    <div className={`w-3 h-3 rounded-full ${religion.color} shadow-sm`}></div>
+                    <h3 className="text-xl font-serif font-semibold text-sage-900">{religion.name}</h3>
                   </div>
-                  <span className="text-xs font-bold text-primary-600 bg-primary-50 px-3 py-1 rounded-full">
+                  <span className="text-xs font-semibold text-sage-700 bg-sage-100 px-3 py-1.5 rounded-md">
                     {religion.verses}
                   </span>
                 </div>
                 {religion.highlight && (
-                  <div className="mb-3">
-                    <span className="text-xs font-semibold text-gold-600 bg-gold-50 px-2 py-1 rounded">
+                  <div className="mb-4">
+                    <span className="text-xs font-medium text-warm-700 bg-warm-200 px-3 py-1 rounded-md">
                       {religion.highlight}
                     </span>
                   </div>
                 )}
-                <div className="space-y-2.5">
+                <div className="space-y-3">
                   {religion.texts.map((text, textIndex) => (
-                    <div key={textIndex} className="flex items-start text-gray-700">
-                      <ChevronRight className="w-4 h-4 mr-2 text-primary-500 mt-0.5 flex-shrink-0" />
-                      <span className="text-sm leading-relaxed">{text}</span>
+                    <div key={textIndex} className="flex items-start text-sage-800">
+                      <ChevronRight className="w-4 h-4 mr-2 text-sage-500 mt-0.5 flex-shrink-0" strokeWidth={2} />
+                      <span className="text-sm leading-relaxed font-light">{text}</span>
                     </div>
                   ))}
                 </div>
@@ -417,21 +437,21 @@ export default function Home() {
       </section>
 
       {/* AI Dialogue Partners Section */}
-      <section className="py-20 bg-gradient-to-br from-primary-50 via-white to-gold-50">
+      <section className="py-24 bg-gradient-to-br from-sage-50 via-warm-50 to-sage-50 section-divider">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 pt-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Practice Interfaith Dialogue with 9 AI Guides</h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                Chat with AI religious guides representing each faith tradition. Practice respectful interfaith conversation on multiple topics. <strong>Academic, neutral approach</strong> — no religious bias.
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold text-sage-900 mb-6 tracking-tight">Practice Interfaith Dialogue with 9 AI Guides</h2>
+              <p className="text-lg md:text-xl text-sage-700 max-w-3xl mx-auto leading-relaxed font-light">
+                Chat with AI religious guides representing each faith tradition. Practice respectful interfaith conversation on multiple topics. Academic, neutral approach — no religious bias.
               </p>
             </motion.div>
           </div>
-          <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-4 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-5 max-w-5xl mx-auto mb-12">
             {[
               { name: 'Rev. Sarah', faith: 'Christianity', emoji: '✝️' },
               { name: 'Brother Ahmed', faith: 'Islam', emoji: '🕌' },
@@ -445,20 +465,20 @@ export default function Home() {
             ].map((guide, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 0.9 }}
+                initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.4, delay: index * 0.05 }}
-                className="bg-white rounded-lg shadow-md p-4 text-center border border-gray-100 hover:shadow-lg transition-shadow"
+                className="bg-white rounded-lg elegant-border elegant-shadow p-5 text-center hover:shadow-lg transition-all"
               >
-                <div className="text-3xl mb-2">{guide.emoji}</div>
-                <div className="font-semibold text-gray-900 text-sm mb-1">{guide.name}</div>
-                <div className="text-xs text-gray-600">{guide.faith}</div>
+                <div className="text-3xl mb-3">{guide.emoji}</div>
+                <div className="font-serif font-semibold text-sage-900 text-sm mb-1">{guide.name}</div>
+                <div className="text-xs text-sage-600 font-light">{guide.faith}</div>
               </motion.div>
             ))}
           </div>
-          <div className="text-center mt-12">
-            <p className="text-gray-600 mb-6">Practice respectful interfaith conversation on topics like prayer, charity, suffering, and more</p>
-            <a href="#download" className="inline-block bg-primary-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors shadow-lg">
+          <div className="text-center mt-14">
+            <p className="text-sage-700 mb-8 font-light text-lg">Practice respectful interfaith conversation on topics like prayer, charity, suffering, and more</p>
+            <a href="#download" className="inline-block bg-sage-700 text-warm-50 px-10 py-3.5 rounded-md font-semibold hover:bg-sage-800 transition-all elegant-shadow hover:shadow-xl">
               Start Your Dialogue Journey
             </a>
           </div>
@@ -466,29 +486,29 @@ export default function Home() {
       </section>
 
       {/* Benefits Section */}
-      <section id="benefits" className="py-20 bg-gradient-to-b from-gray-50 to-white">
+      <section id="benefits" className="py-24 bg-white section-divider">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Who Faith Explorer Is For</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Trusted by religious scholars, spiritual seekers, and interfaith leaders worldwide. <strong>Academic, neutral approach</strong> — no religious bias. <strong>Complete texts, not excerpts</strong>.
+          <div className="text-center mb-20 pt-8">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold text-sage-900 mb-6 tracking-tight">Who Faith Explorer Is For</h2>
+            <p className="text-lg md:text-xl text-sage-700 max-w-3xl mx-auto leading-relaxed font-light">
+              Trusted by religious scholars, spiritual seekers, and interfaith leaders worldwide. Academic, neutral approach — no religious bias. Complete texts, not excerpts.
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white rounded-xl shadow-lg border border-gray-100 p-8 card-hover"
+                className="bg-warm-50 rounded-lg elegant-border elegant-shadow p-10 card-hover"
               >
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">{benefit.title}</h3>
+                <h3 className="text-2xl font-serif font-semibold text-sage-900 mb-8">{benefit.title}</h3>
                 <ul className="space-y-4">
                   {benefit.points.map((point, pointIndex) => (
                     <li key={pointIndex} className="flex items-start">
-                      <Star className="w-5 h-5 text-gold-500 mr-3 mt-0.5 flex-shrink-0 fill-current" />
-                      <span className="text-gray-700 leading-relaxed">{point}</span>
+                      <Star className="w-5 h-5 text-warm-600 mr-3 mt-0.5 flex-shrink-0 fill-current" />
+                      <span className="text-sage-700 leading-relaxed font-light">{point}</span>
                     </li>
                   ))}
                 </ul>
@@ -499,11 +519,11 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
-      <section id="testimonials" className="py-20 bg-white">
+      <section id="testimonials" className="py-24 bg-gradient-to-br from-sage-50 via-warm-50 to-sage-50 section-divider">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Trusted by Religious Scholars & Students</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">Join thousands exploring faith with academic rigor and respectful interfaith dialogue</p>
+          <div className="text-center mb-16 pt-8">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold text-sage-900 mb-6 tracking-tight">Trusted by Religious Scholars & Students</h2>
+            <p className="text-lg md:text-xl text-sage-700 max-w-2xl mx-auto leading-relaxed font-light">Join thousands exploring faith with academic rigor and respectful interfaith dialogue</p>
           </div>
           <div className="max-w-4xl mx-auto">
             <motion.div
@@ -512,26 +532,26 @@ export default function Home() {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -20 }}
               transition={{ duration: 0.5 }}
-              className="bg-white rounded-xl shadow-lg p-8 text-center"
+              className="bg-white rounded-lg elegant-border elegant-shadow p-12 text-center"
             >
-              <div className="flex justify-center mb-4">
+              <div className="flex justify-center mb-6">
                 {[...Array(testimonials[currentTestimonial].rating)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 text-gold-500 fill-current" />
+                  <Star key={i} className="w-5 h-5 text-warm-600 fill-current" />
                 ))}
               </div>
-              <p className="text-xl text-gray-700 mb-6 italic leading-relaxed">"{testimonials[currentTestimonial].content}"</p>
-              <div>
-                <p className="font-semibold text-gray-900 text-lg">{testimonials[currentTestimonial].name}</p>
-                <p className="text-gray-600">{testimonials[currentTestimonial].role}</p>
+              <p className="text-xl md:text-2xl text-sage-800 mb-8 italic leading-relaxed font-light">"{testimonials[currentTestimonial].content}"</p>
+              <div className="pt-4 border-t border-sage-200">
+                <p className="font-serif font-semibold text-sage-900 text-lg mb-1">{testimonials[currentTestimonial].name}</p>
+                <p className="text-sage-600 font-light">{testimonials[currentTestimonial].role}</p>
               </div>
             </motion.div>
-            <div className="flex justify-center mt-8 space-x-2">
+            <div className="flex justify-center mt-10 space-x-2">
               {testimonials.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentTestimonial(index)}
-                  className={`w-3 h-3 rounded-full transition-colors ${
-                    index === currentTestimonial ? 'bg-primary-600' : 'bg-gray-300'
+                  className={`w-2.5 h-2.5 rounded-full transition-all ${
+                    index === currentTestimonial ? 'bg-sage-700 w-8' : 'bg-sage-300'
                   }`}
                   aria-label={`View testimonial ${index + 1}`}
                 />
@@ -542,16 +562,16 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-gradient-to-b from-white to-gray-50">
+      <section id="contact" className="py-24 bg-white section-divider">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 pt-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Get in Touch</h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold text-sage-900 mb-6 tracking-tight">Get in Touch</h2>
+              <p className="text-lg md:text-xl text-sage-700 max-w-3xl mx-auto leading-relaxed font-light">
                 Have questions about Faith Explorer? Want to suggest a feature or report an issue? We'd love to hear from you.
               </p>
             </motion.div>
@@ -561,18 +581,18 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="bg-white rounded-xl shadow-lg border border-gray-100 p-8"
+              className="bg-warm-50 rounded-lg elegant-border elegant-shadow p-10"
             >
               {formStatus === 'success' ? (
                 <div className="text-center py-8">
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">
-                    <CheckCircle className="w-8 h-8 text-green-600" />
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-sage-100 rounded-full mb-4">
+                    <CheckCircle className="w-8 h-8 text-sage-700" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Message Sent!</h3>
-                  <p className="text-gray-600 mb-6">Thank you for reaching out. We'll get back to you soon.</p>
+                  <h3 className="text-2xl font-serif font-semibold text-sage-900 mb-2">Message Sent!</h3>
+                  <p className="text-sage-700 mb-6 font-light">Thank you for reaching out. We'll get back to you soon.</p>
                   <button
                     onClick={() => setFormStatus('idle')}
-                    className="text-primary-600 hover:text-primary-700 font-semibold transition-colors"
+                    className="text-sage-700 hover:text-sage-900 font-semibold transition-colors"
                   >
                     Send another message
                   </button>
@@ -581,7 +601,7 @@ export default function Home() {
                 <form onSubmit={handleContactSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
+                      <label htmlFor="name" className="block text-sm font-semibold text-sage-800 mb-2">
                         Your Name
                       </label>
                       <input
@@ -591,12 +611,12 @@ export default function Home() {
                         required
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors text-gray-900"
+                        className="w-full px-4 py-3 border border-sage-200 rounded-md focus:ring-2 focus:ring-sage-500 focus:border-sage-500 transition-colors text-sage-900 bg-white"
                         placeholder="John Doe"
                       />
                     </div>
                     <div>
-                      <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
+                      <label htmlFor="email" className="block text-sm font-semibold text-sage-800 mb-2">
                         Email Address
                       </label>
                       <input
@@ -606,13 +626,13 @@ export default function Home() {
                         required
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors text-gray-900"
+                        className="w-full px-4 py-3 border border-sage-200 rounded-md focus:ring-2 focus:ring-sage-500 focus:border-sage-500 transition-colors text-sage-900 bg-white"
                         placeholder="john@example.com"
                       />
                     </div>
                   </div>
                   <div>
-                    <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-2">
+                    <label htmlFor="message" className="block text-sm font-semibold text-sage-800 mb-2">
                       Message
                     </label>
                     <textarea
@@ -622,13 +642,13 @@ export default function Home() {
                       rows={5}
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors resize-none text-gray-900"
+                      className="w-full px-4 py-3 border border-sage-200 rounded-md focus:ring-2 focus:ring-sage-500 focus:border-sage-500 transition-colors resize-none text-sage-900 bg-white"
                       placeholder="How can we help you?"
                     />
                   </div>
 
                   {formStatus === 'error' && (
-                    <div className="flex items-center gap-2 text-red-600 bg-red-50 p-3 rounded-lg">
+                    <div className="flex items-center gap-2 text-burgundy-700 bg-burgundy-50 p-3 rounded-md elegant-border border-burgundy-200">
                       <AlertCircle className="w-5 h-5 flex-shrink-0" />
                       <span className="text-sm">{formError}</span>
                     </div>
@@ -637,7 +657,7 @@ export default function Home() {
                   <button
                     type="submit"
                     disabled={formStatus === 'submitting'}
-                    className="w-full bg-primary-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-primary-700 transition-all flex items-center justify-center shadow-lg hover:shadow-xl disabled:opacity-70 disabled:cursor-not-allowed"
+                    className="w-full bg-sage-700 text-warm-50 px-8 py-4 rounded-md text-base font-semibold hover:bg-sage-800 transition-all flex items-center justify-center elegant-shadow hover:shadow-xl disabled:opacity-70 disabled:cursor-not-allowed"
                   >
                     {formStatus === 'submitting' ? (
                       <>
@@ -658,9 +678,9 @@ export default function Home() {
               )}
             </motion.div>
             <div className="mt-8 text-center">
-              <p className="text-gray-600">
+              <p className="text-sage-700 font-light">
                 Or email us directly at{' '}
-                <a href="mailto:mike@faithexplorer.app" className="text-primary-600 hover:text-primary-700 font-semibold transition-colors">
+                <a href="mailto:mike@faithexplorer.app" className="text-sage-800 hover:text-sage-900 font-semibold transition-colors underline decoration-sage-300">
                   mike@faithexplorer.app
                 </a>
               </p>
@@ -670,45 +690,44 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section id="download" className="py-20 hero-bg text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary-700/50 to-primary-900/50"></div>
+      <section id="download" className="py-24 hero-bg text-warm-50 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold mb-8 leading-tight tracking-tight">
               Access 144,122 Sacred Verses Today
             </h2>
-            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-gray-100 leading-relaxed">
-              Start your journey with the <strong>world's largest multi-faith scripture database</strong>. Free tier available — no credit card required. <strong>Catholic & Orthodox Bibles included</strong>. Practice interfaith dialogue with <strong>9 AI guides</strong>.
+            <p className="text-lg md:text-xl mb-10 max-w-3xl mx-auto text-warm-100 leading-relaxed font-light">
+              Start your journey with the world's largest multi-faith scripture database. Free tier available — no credit card required. Catholic & Orthodox Bibles included. Practice interfaith dialogue with 9 AI guides.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-              <a href="https://apps.apple.com/app/faith-explorer" className="bg-gold-500 text-white px-8 py-4 rounded-lg text-lg font-bold hover:bg-gold-600 transition-all flex items-center shadow-xl hover:shadow-2xl min-w-[240px] justify-center transform hover:scale-105">
-                <Download className="w-5 h-5 mr-2" />
+            <div className="flex flex-col sm:flex-row gap-5 justify-center items-center mb-10">
+              <a href="https://apps.apple.com/app/faith-explorer" className="bg-warm-500 text-sage-900 px-10 py-4 rounded-md text-base font-semibold hover:bg-warm-600 transition-all flex items-center elegant-shadow hover:shadow-xl min-w-[240px] justify-center group">
+                <Download className="w-5 h-5 mr-2 group-hover:translate-y-0.5 transition-transform" />
                 Download for iOS
               </a>
-              <a href="https://play.google.com/store/apps/details?id=com.faithexplorer" className="bg-gold-500 text-white px-8 py-4 rounded-lg text-lg font-bold hover:bg-gold-600 transition-all flex items-center shadow-xl hover:shadow-2xl min-w-[240px] justify-center transform hover:scale-105">
-                <Download className="w-5 h-5 mr-2" />
+              <a href="https://play.google.com/store/apps/details?id=com.faithexplorer" className="bg-warm-500 text-sage-900 px-10 py-4 rounded-md text-base font-semibold hover:bg-warm-600 transition-all flex items-center elegant-shadow hover:shadow-xl min-w-[240px] justify-center group">
+                <Download className="w-5 h-5 mr-2 group-hover:translate-y-0.5 transition-transform" />
                 Download for Android
               </a>
             </div>
-            <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-gray-200">
-              <div className="flex items-center">
-                <Shield className="w-5 h-5 mr-2" />
+            <div className="mt-10 flex flex-wrap justify-center gap-8 text-sm text-warm-200/90">
+              <div className="flex items-center gap-2">
+                <Shield className="w-5 h-5" strokeWidth={1.5} />
                 Privacy-focused
               </div>
-              <div className="flex items-center">
-                <Zap className="w-5 h-5 mr-2" />
+              <div className="flex items-center gap-2">
+                <Zap className="w-5 h-5" strokeWidth={1.5} />
                 Works offline
               </div>
-              <div className="flex items-center">
-                <Globe className="w-5 h-5 mr-2" />
+              <div className="flex items-center gap-2">
+                <Globe className="w-5 h-5" strokeWidth={1.5} />
                 Cross-platform sync
               </div>
-              <div className="flex items-center">
-                <Star className="w-5 h-5 mr-2 fill-current" />
+              <div className="flex items-center gap-2">
+                <Star className="w-5 h-5 fill-current" strokeWidth={1.5} />
                 4.9/5 rating
               </div>
             </div>
@@ -717,52 +736,52 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
+      <footer className="bg-sage-900 text-warm-100 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-4 gap-10">
             <div>
-              <div className="flex items-center mb-4">
-                <BookOpen className="w-8 h-8 text-primary-400" />
-                <span className="ml-2 text-xl font-bold">Faith Explorer</span>
+              <div className="flex items-center gap-3 mb-5">
+                <BookOpen className="w-7 h-7 text-warm-400" strokeWidth={1.5} />
+                <span className="text-xl font-serif font-semibold text-warm-50">Faith Explorer</span>
               </div>
-              <p className="text-gray-400 leading-relaxed">
-                The world's most comprehensive religious text app with <strong>144,122 verses</strong> from <strong>17 sacred texts</strong> across <strong>9 major religions</strong>. AI-powered insights and 9 dialogue partners.
+              <p className="text-warm-200/80 leading-relaxed font-light text-sm">
+                The world's most comprehensive religious text app with 144,122 verses from 17 sacred texts across 9 major religions. AI-powered insights and 9 dialogue partners.
               </p>
             </div>
             <div>
-              <h3 className="text-lg font-semibold mb-4">Sacred Texts</h3>
-              <ul className="space-y-2 text-gray-400">
-                <li><a href="#religions" className="hover:text-white transition-colors">Christianity</a></li>
-                <li><a href="#religions" className="hover:text-white transition-colors">Islam</a></li>
-                <li><a href="#religions" className="hover:text-white transition-colors">Judaism - Complete Talmud</a></li>
-                <li><a href="#religions" className="hover:text-white transition-colors">Buddhism & Hinduism</a></li>
-                <li><a href="#religions" className="hover:text-white transition-colors">All 9 Religions</a></li>
-                <li><a href="#features" className="hover:text-white transition-colors">AI-Powered Search</a></li>
-                <li><a href="#benefits" className="hover:text-white transition-colors">For Students & Scholars</a></li>
+              <h3 className="text-base font-serif font-semibold mb-5 text-warm-50">Sacred Texts</h3>
+              <ul className="space-y-2.5 text-warm-200/80 text-sm font-light">
+                <li><a href="#religions" className="hover:text-warm-50 transition-colors">Christianity</a></li>
+                <li><a href="#religions" className="hover:text-warm-50 transition-colors">Islam</a></li>
+                <li><a href="#religions" className="hover:text-warm-50 transition-colors">Judaism</a></li>
+                <li><a href="#religions" className="hover:text-warm-50 transition-colors">Buddhism & Hinduism</a></li>
+                <li><a href="#religions" className="hover:text-warm-50 transition-colors">All 9 Religions</a></li>
+                <li><a href="#features" className="hover:text-warm-50 transition-colors">AI-Powered Search</a></li>
+                <li><a href="#benefits" className="hover:text-warm-50 transition-colors">For Students & Scholars</a></li>
               </ul>
             </div>
             <div>
-              <h3 className="text-lg font-semibold mb-4">Features</h3>
-              <ul className="space-y-2 text-gray-400">
-                <li><a href="#features" className="hover:text-white transition-colors">AI-Powered Search</a></li>
-                <li><a href="#features" className="hover:text-white transition-colors">Cross-Religion Comparison</a></li>
-                <li><a href="#features" className="hover:text-white transition-colors">Personal Library</a></li>
-                <li><a href="#features" className="hover:text-white transition-colors">Offline Access</a></li>
+              <h3 className="text-base font-serif font-semibold mb-5 text-warm-50">Features</h3>
+              <ul className="space-y-2.5 text-warm-200/80 text-sm font-light">
+                <li><a href="#features" className="hover:text-warm-50 transition-colors">AI-Powered Search</a></li>
+                <li><a href="#features" className="hover:text-warm-50 transition-colors">Cross-Religion Comparison</a></li>
+                <li><a href="#features" className="hover:text-warm-50 transition-colors">Personal Library</a></li>
+                <li><a href="#features" className="hover:text-warm-50 transition-colors">Offline Access</a></li>
               </ul>
             </div>
             <div>
-              <h3 className="text-lg font-semibold mb-4">Support</h3>
-              <ul className="space-y-2 text-gray-400">
-                <li><a href="#contact" className="hover:text-white transition-colors">Contact Us</a></li>
-                <li><a href="mailto:mike@faithexplorer.app" className="hover:text-white transition-colors">mike@faithexplorer.app</a></li>
-                <li><a href="/privacy" className="hover:text-white transition-colors">Privacy Policy</a></li>
-                <li><a href="/terms" className="hover:text-white transition-colors">Terms of Service</a></li>
+              <h3 className="text-base font-serif font-semibold mb-5 text-warm-50">Support</h3>
+              <ul className="space-y-2.5 text-warm-200/80 text-sm font-light">
+                <li><a href="#contact" className="hover:text-warm-50 transition-colors">Contact Us</a></li>
+                <li><a href="mailto:mike@faithexplorer.app" className="hover:text-warm-50 transition-colors">mike@faithexplorer.app</a></li>
+                <li><a href="/privacy" className="hover:text-warm-50 transition-colors">Privacy Policy</a></li>
+                <li><a href="/terms" className="hover:text-warm-50 transition-colors">Terms of Service</a></li>
               </ul>
             </div>
           </div>
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 Faith Explorer. All rights reserved.</p>
-            <p className="mt-2 text-sm">144,122 verses • 9 religions • 17 texts • 9 AI guides • Academic-quality sources</p>
+          <div className="border-t border-sage-700/50 mt-12 pt-8 text-center text-warm-200/70">
+            <p className="font-light">&copy; 2024 Faith Explorer. All rights reserved.</p>
+            <p className="mt-2 text-sm font-light">144,122 verses • 9 religions • 17 texts • 9 AI guides • Academic-quality sources</p>
           </div>
         </div>
       </footer>
