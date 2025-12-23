@@ -2,12 +2,12 @@
 
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { 
-  BookOpen, 
-  MessageCircle, 
-  Search, 
-  Users, 
-  Star, 
+import {
+  BookOpen,
+  MessageCircle,
+  Search,
+  Users,
+  Star,
   Download,
   ChevronRight,
   Globe,
@@ -29,66 +29,66 @@ import {
 } from 'lucide-react'
 
 const religions = [
-  { 
-    name: 'Christianity', 
-    texts: ['KJV Bible (31,100 verses)', 'Catholic Bible - Douay-Rheims (34,827 verses)', 'Orthodox Bible (34,827 verses)', 'Book of Mormon (6,604 verses)', 'Doctrine & Covenants (3,654 verses)'], 
-    color: 'bg-blue-500', 
+  {
+    name: 'Christianity',
+    texts: ['KJV Bible (31,100 verses)', 'Catholic Bible - Douay-Rheims (34,827 verses)', 'Orthodox Bible (34,827 verses)', 'Book of Mormon (6,604 verses)', 'Doctrine & Covenants (3,654 verses)'],
+    color: 'bg-blue-500',
     verses: '110,000+',
     highlight: 'Catholic & Orthodox included'
   },
-  { 
-    name: 'Islam', 
-    texts: ['Quran - Sahih International (6,236 verses)', 'Hadith - Bukhari (7,589 verses)'], 
-    color: 'bg-green-500', 
+  {
+    name: 'Islam',
+    texts: ['Quran - Sahih International (6,236 verses)', 'Hadith - Bukhari (7,589 verses)'],
+    color: 'bg-green-500',
     verses: '13,825+',
     highlight: 'Authentic translations'
   },
-  { 
-    name: 'Judaism', 
-    texts: ['Torah (5,846 verses)'], 
-    color: 'bg-yellow-500', 
+  {
+    name: 'Judaism',
+    texts: ['Torah (5,846 verses)'],
+    color: 'bg-yellow-500',
     verses: '5,846',
     highlight: 'Complete Torah'
   },
-  { 
-    name: 'Hinduism', 
-    texts: ['Bhagavad Gita - Complete (9,814 verses)'], 
-    color: 'bg-red-500', 
+  {
+    name: 'Hinduism',
+    texts: ['Bhagavad Gita - Complete (9,814 verses)'],
+    color: 'bg-red-500',
     verses: '9,814',
     highlight: 'Full text included'
   },
-  { 
-    name: 'Buddhism', 
-    texts: ['Dhammapada (423 verses)'], 
-    color: 'bg-orange-500', 
+  {
+    name: 'Buddhism',
+    texts: ['Dhammapada (423 verses)'],
+    color: 'bg-orange-500',
     verses: '423',
     highlight: 'Core teachings'
   },
-  { 
-    name: 'Sikhism', 
-    texts: ['Guru Granth Sahib (2,052 verses)'], 
-    color: 'bg-amber-500', 
+  {
+    name: 'Sikhism',
+    texts: ['Guru Granth Sahib (2,052 verses)'],
+    color: 'bg-amber-500',
     verses: '2,052',
     highlight: 'Complete Granth'
   },
-  { 
-    name: 'Taoism', 
-    texts: ['Chuang Tzu (634 verses)', 'Tao Te Ching (10 verses)'], 
-    color: 'bg-purple-500', 
+  {
+    name: 'Taoism',
+    texts: ['Chuang Tzu (634 verses)', 'Tao Te Ching (10 verses)'],
+    color: 'bg-purple-500',
     verses: '644',
     highlight: 'Classic texts'
   },
-  { 
-    name: 'Confucianism', 
-    texts: ['Analects (486 verses)'], 
-    color: 'bg-indigo-500', 
+  {
+    name: 'Confucianism',
+    texts: ['Analects (486 verses)'],
+    color: 'bg-indigo-500',
     verses: '486',
     highlight: 'Philosophical wisdom'
   },
-  { 
-    name: 'Shinto', 
-    texts: ['Kojiki (20 verses)'], 
-    color: 'bg-pink-500', 
+  {
+    name: 'Shinto',
+    texts: ['Kojiki (20 verses)'],
+    color: 'bg-pink-500',
     verses: '20',
     highlight: 'Ancient traditions'
   }
@@ -550,9 +550,8 @@ export default function Home() {
                 <button
                   key={index}
                   onClick={() => setCurrentTestimonial(index)}
-                  className={`w-2.5 h-2.5 rounded-full transition-all ${
-                    index === currentTestimonial ? 'bg-sage-700 w-8' : 'bg-sage-300'
-                  }`}
+                  className={`w-2.5 h-2.5 rounded-full transition-all ${index === currentTestimonial ? 'bg-sage-700 w-8' : 'bg-sage-300'
+                    }`}
                   aria-label={`View testimonial ${index + 1}`}
                 />
               ))}
@@ -709,14 +708,14 @@ export default function Home() {
               Start your journey with the world's largest multi-faith scripture database. Free tier available — no credit card required. Catholic & Orthodox Bibles included. Practice interfaith dialogue with 9 AI guides.
             </p>
             <div className="flex flex-col sm:flex-row gap-5 justify-center items-center mb-12">
-              <a href="https://apps.apple.com/app/faith-explorer" className="bg-warm-500 text-sage-900 px-10 py-4 rounded-lg text-base font-semibold hover:bg-warm-600 transition-all flex items-center shadow-xl hover:shadow-2xl min-w-[240px] justify-center group">
+              <a href="https://apps.apple.com/us/app/faith-explorer-bible-quran/id6753657912" className="bg-warm-500 text-sage-900 px-10 py-4 rounded-lg text-base font-semibold hover:bg-warm-600 transition-all flex items-center shadow-xl hover:shadow-2xl min-w-[240px] justify-center group">
                 <Download className="w-5 h-5 mr-2 group-hover:translate-y-0.5 transition-transform" />
                 Download for iOS
               </a>
-              <a href="https://play.google.com/store/apps/details?id=com.faithexplorer" className="bg-warm-500 text-sage-900 px-10 py-4 rounded-lg text-base font-semibold hover:bg-warm-600 transition-all flex items-center shadow-xl hover:shadow-2xl min-w-[240px] justify-center group">
-                <Download className="w-5 h-5 mr-2 group-hover:translate-y-0.5 transition-transform" />
-                Download for Android
-              </a>
+              <div className="bg-sage-600 text-warm-100 px-10 py-4 rounded-lg text-base font-semibold flex items-center min-w-[240px] justify-center cursor-not-allowed opacity-80">
+                <Download className="w-5 h-5 mr-2" />
+                Android Coming Soon
+              </div>
             </div>
             <div className="mt-10 flex flex-wrap justify-center gap-8 text-sm text-warm-200 font-medium">
               <div className="flex items-center gap-2">
