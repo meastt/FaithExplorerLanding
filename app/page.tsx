@@ -18,7 +18,10 @@ import {
   Smartphone,
   BookMarked,
   Scale,
-  Calendar
+  Calendar,
+  CheckCircle,
+  AlertCircle,
+  Send
 } from 'lucide-react'
 
 const religions = [
