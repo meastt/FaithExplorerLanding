@@ -2,30 +2,23 @@
 
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 import {
   BookOpen,
   MessageCircle,
   Search,
-  Users,
   Star,
   Download,
   ChevronRight,
   Globe,
-  Heart,
-  Lightbulb,
   Shield,
   Zap,
   Database,
   Sparkles,
-  Lock,
   Smartphone,
   BookMarked,
   Scale,
-  Calendar,
-  Mail,
-  Send,
-  CheckCircle,
-  AlertCircle
+  Calendar
 } from 'lucide-react'
 
 const religions = [
@@ -250,6 +243,7 @@ export default function Home() {
               <a href="#features" className="text-sage-700 hover:text-sage-900 transition-colors text-sm font-medium tracking-wide">Features</a>
               <a href="#religions" className="text-sage-700 hover:text-sage-900 transition-colors text-sm font-medium tracking-wide">Sacred Texts</a>
               <a href="#testimonials" className="text-sage-700 hover:text-sage-900 transition-colors text-sm font-medium tracking-wide">Reviews</a>
+              <Link href="/about" className="text-sage-700 hover:text-sage-900 transition-colors text-sm font-medium tracking-wide">About</Link>
               <a href="#contact" className="text-sage-700 hover:text-sage-900 transition-colors text-sm font-medium tracking-wide">Contact</a>
             </div>
             <a href="#download" className="bg-sage-700 text-warm-50 px-7 py-2.5 rounded-md hover:bg-sage-800 transition-all elegant-shadow text-sm font-medium tracking-wide">
@@ -776,10 +770,11 @@ export default function Home() {
             <div>
               <h3 className="text-base font-serif font-semibold mb-5 text-warm-50">Support</h3>
               <ul className="space-y-2.5 text-warm-200/80 text-sm font-light">
+                <li><Link href="/about" className="hover:text-warm-50 transition-colors">About</Link></li>
                 <li><a href="#contact" className="hover:text-warm-50 transition-colors">Contact Us</a></li>
                 <li><a href="mailto:mike@faithexplorer.app" className="hover:text-warm-50 transition-colors">mike@faithexplorer.app</a></li>
-                <li><a href="/privacy" className="hover:text-warm-50 transition-colors">Privacy Policy</a></li>
-                <li><a href="/terms" className="hover:text-warm-50 transition-colors">Terms of Service</a></li>
+                <li><Link href="/privacy" className="hover:text-warm-50 transition-colors">Privacy Policy</Link></li>
+                <li><Link href="/terms" className="hover:text-warm-50 transition-colors">Terms of Service</Link></li>
               </ul>
             </div>
           </div>

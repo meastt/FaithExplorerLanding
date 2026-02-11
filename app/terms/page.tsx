@@ -38,6 +38,7 @@ export default function TermsOfService() {
               <Link href="/#features" className="text-gray-600 hover:text-primary-600 transition-colors">Features</Link>
               <Link href="/#religions" className="text-gray-600 hover:text-primary-600 transition-colors">Religions</Link>
               <Link href="/#testimonials" className="text-gray-600 hover:text-primary-600 transition-colors">Reviews</Link>
+              <Link href="/about" className="text-gray-600 hover:text-primary-600 transition-colors">About</Link>
             </div>
             <Link href="/" className="bg-primary-600 text-white px-6 py-2 rounded-lg hover:bg-primary-700 transition-colors">
               Back to Home
@@ -368,6 +369,7 @@ export default function TermsOfService() {
             <div>
               <h3 className="text-lg font-semibold mb-4">Support</h3>
               <ul className="space-y-2 text-gray-400">
+                <li><Link href="/about" className="hover:text-white transition-colors">About</Link></li>
                 <li><a href="mailto:support@faithexplorer.app" className="hover:text-white transition-colors">Contact Us</a></li>
                 <li><Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link></li>
                 <li><Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link></li>

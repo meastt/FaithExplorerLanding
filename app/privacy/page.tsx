@@ -38,6 +38,7 @@ export default function PrivacyPolicy() {
               <Link href="/#features" className="text-gray-600 hover:text-primary-600 transition-colors">Features</Link>
               <Link href="/#religions" className="text-gray-600 hover:text-primary-600 transition-colors">Religions</Link>
               <Link href="/#testimonials" className="text-gray-600 hover:text-primary-600 transition-colors">Reviews</Link>
+              <Link href="/about" className="text-gray-600 hover:text-primary-600 transition-colors">About</Link>
             </div>
             <Link href="/" className="bg-primary-600 text-white px-6 py-2 rounded-lg hover:bg-primary-700 transition-colors">
               Back to Home
@@ -72,7 +73,7 @@ export default function PrivacyPolicy() {
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="prose prose-lg max-w-none">
-            
+
             <div className="bg-blue-50 border-l-4 border-blue-400 p-6 mb-8">
               <h3 className="text-lg font-semibold text-blue-800 mb-2">Key Privacy Highlights</h3>
               <ul className="text-blue-700 space-y-1">
@@ -88,7 +89,7 @@ export default function PrivacyPolicy() {
             <p className="text-gray-700 mb-4">
               Faith Explorer is designed with privacy as a core principle while providing a free, ad-supported experience.
             </p>
-            
+
             <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">1.1 Personal Data</h3>
             <p className="text-gray-700 mb-4">
               Faith Explorer does not require you to create an account or provide personal information such as:
@@ -124,7 +125,7 @@ export default function PrivacyPolicy() {
             </ul>
 
             <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">2. How We Use Information</h2>
-            
+
             <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">2.1 Advertising Purposes</h3>
             <p className="text-gray-700 mb-4">
               If you consent to tracking, device identifiers and advertising data are used to:
@@ -166,7 +167,7 @@ export default function PrivacyPolicy() {
             </p>
 
             <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">4. Religious Content and AI Processing</h2>
-            
+
             <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">4.1 Religious Texts</h3>
             <p className="text-gray-700 mb-4">
               Faith Explorer provides access to publicly available religious texts and scriptures sourced from:
@@ -190,7 +191,7 @@ export default function PrivacyPolicy() {
             </ul>
 
             <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">5. Data Storage and Security</h2>
-            
+
             <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">5.1 Local Storage</h3>
             <p className="text-gray-700 mb-4">
               Faith Explorer stores the following data locally on your device:
@@ -268,14 +269,14 @@ export default function PrivacyPolicy() {
             <p className="text-gray-700 mb-4">
               If you have any questions about this privacy policy or Faith Explorer's data practices, please contact us:
             </p>
-            
+
             <div className="bg-gray-50 p-6 rounded-lg mb-6">
               <div className="flex items-center mb-4">
                 <Mail className="w-5 h-5 text-primary-600 mr-2" />
                 <span className="font-semibold text-gray-900">Email</span>
               </div>
-              <a 
-                href="mailto:mike@faithexplorer.app" 
+              <a
+                href="mailto:mike@faithexplorer.app"
                 className="text-primary-600 hover:text-primary-700 font-medium"
               >
                 mike@faithexplorer.app
@@ -330,6 +331,7 @@ export default function PrivacyPolicy() {
             <div>
               <h3 className="text-lg font-semibold mb-4">Support</h3>
               <ul className="space-y-2 text-gray-400">
+                <li><Link href="/about" className="hover:text-white transition-colors">About</Link></li>
                 <li><a href="mailto:mike@faithexplorer.app" className="hover:text-white transition-colors">Contact Us</a></li>
                 <li><Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link></li>
                 <li><Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link></li>
